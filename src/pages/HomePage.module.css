@@ -1,0 +1,238 @@
+.hero {
+  box-sizing: border-box;
+  flex-shrink: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 100px 100px 100px 100px;
+  background-color: #403f4c;
+  overflow: hidden;
+  position: relative;
+  align-content: center;
+  flex-wrap: nowrap;
+  gap: 0;
+  border-radius: 0px 0px 0px 0px;
+}
+
+.content {
+  flex-shrink: 0;
+  width: 100%;
+  height: min-content; /* 431px */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  max-width: 1000px;
+  overflow: hidden;
+  z-index: 1;
+  position: relative;
+  padding: 0px 0px 0px 0px;
+  align-content: flex-start;
+  flex-wrap: nowrap;
+  gap: 40;
+  border-radius: 0px 0px 0px 0px;
+}
+
+.title {
+  flex-shrink: 0;
+  width: 100%;
+  height: auto; /* 141px */
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  word-break: break-word;
+  max-width: 800px;
+  overflow: visible;
+  position: relative;
+  font-weight: 400;
+  font-style: normal;
+  font-family: 'Margarine', sans-serif;
+  color: #fdb833;
+  font-size: 64px;
+  letter-spacing: 0em;
+  line-height: 1.1;
+  text-align: center;
+}
+
+.welcome {
+  flex-shrink: 0;
+  width: 100%;
+  height: auto; /* 58px */
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  word-break: break-word;
+  overflow: visible;
+  position: relative;
+  font-weight: 400;
+  font-style: normal;
+  font-family: 'Margarine', sans-serif;
+  color: #000000;
+  font-size: 48px;
+  letter-spacing: 0em;
+  line-height: 1.2;
+  text-align: left;
+}
+
+.blueBlock {
+  box-sizing: border-box;
+  flex-shrink: 0;
+  width: 100%;
+  height: min-content; /* 631px */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 100px 100px 100px 100px;
+  background-color: #1789fc;
+  overflow: hidden;
+  position: relative;
+  align-content: center;
+  flex-wrap: nowrap;
+  gap: 0;
+  border-radius: 0px 0px 0px 0px;
+}
+
+.blueBlockTitle {
+  flex-shrink: 0;
+  width: 100%;
+  height: auto; /* 58px */
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  word-break: break-word;
+  overflow: visible;
+  position: relative;
+  font-weight: 400;
+  font-style: normal;
+  font-family: 'Margarine', sans-serif;
+  color: #000000;
+  font-size: 40px;
+  letter-spacing: 0em;
+  line-height: 1.2;
+  text-align: left;
+}
+
+.blueBlockText {
+  flex-shrink: 0;
+  width: 100%;
+  height: auto; /* 333px */
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  word-break: break-word;
+  overflow: visible;
+  position: relative;
+  font-weight: 400;
+  font-style: normal;
+  font-family: 'Nunito', 'Nunito Placeholder', sans-serif;
+  color: #ffffff;
+  font-size: 30px;
+  letter-spacing: -0.05em;
+  line-height: 1.3;
+  text-align: left;
+}
+
+.callToAction {
+  box-sizing: border-box;
+  flex-shrink: 0;
+  width: 100%;
+  height: min-content; /* 386px */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 100px 100px 100px 100px;
+  background-color: #ffd07b;
+  overflow: visible;
+  position: relative;
+  align-content: center;
+  flex-wrap: nowrap;
+  gap: 20;
+  border-radius: 0px 0px 0px 0px;
+}
+
+.userRegistration {
+  flex-shrink: 0;
+  width: 100%;
+  height: auto; /* 58px */
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  word-break: break-word;
+  max-width: 800px;
+  overflow: visible;
+  position: relative;
+  font-weight: 400;
+  font-style: normal;
+  font-family: 'Margarine', sans-serif;
+  color: #000000;
+  font-size: 48px;
+  letter-spacing: 0em;
+  line-height: 1.2;
+  text-align: center;
+}
+
+.join {
+  flex-shrink: 0;
+  width: 500px;
+  height: auto; /* 48px */
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  word-break: break-word;
+  max-width: 100%;
+  overflow: visible;
+  position: relative;
+  font-weight: 400;
+  font-style: normal;
+  font-family: 'Nunito', 'Nunito Placeholder', sans-serif;
+  color: #000000;
+  font-size: 16px;
+  letter-spacing: 0em;
+  line-height: 1.5;
+  text-align: center;
+}
+
+/* HomePage.module.css */
+
+/* ... (інші стилі) */
+
+.button {
+  box-sizing: border-box;
+  flex-shrink: 0;
+  height: 40px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 15px 15px 15px 15px;
+  background-color: #1789fc;
+  overflow: visible;
+  position: relative;
+  align-content: center;
+  flex-wrap: nowrap;
+  gap: 10px;
+  border-radius: 8px;
+  color: #ffffff;
+  font-weight: bold;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.button:hover {
+  background-color: #0c65a8;
+}
+
+.sign-up {
+  flex-shrink: 0;
+  width: auto; /* 50px */
+  height: auto; /* 17px */
+  white-space: pre;
+  position: relative;
+  font-weight: 400;
+  font-style: normal;
+  font-family: 'Nunito', 'Nunito Placeholder', sans-serif;
+  color: #ffffff;
+  font-size: 14px;
+  letter-spacing: 0em;
+  line-height: 1.2;
+  text-align: center;
+}
