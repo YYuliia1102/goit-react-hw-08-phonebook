@@ -9,11 +9,29 @@
   padding: 100px 100px 100px 100px;
   background-color: #403f4c;
   overflow: hidden;
-  position: relative;
+  /* position: relative; */
   align-content: center;
   flex-wrap: nowrap;
   gap: 0;
   border-radius: 0px 0px 0px 0px;
+  background-image: url('https://images.wallpaperscraft.ru/image/single/klaviatura_telefon_rabochij_stol_179668_1920x1080.jpg');
+  background-size: cover; /* Розтягнути зображення на весь блок */
+  background-position: center;
+}
+
+.hero:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0.6
+  ); /* Затемнення: змініть альфа-канал за потреби */
 }
 
 .content {
