@@ -1,8 +1,11 @@
 import React from 'react';
+import { useDispatch } from 'react-redux';
+import { registerUserThunk } from 'redux/operations';
 import styles from './RegisterPage.module.css';
 
 
 export const RegisterPage = () => {
+    const dispatch = useDispatch();
 
     const handleSubmit = (event) => {
         event.preventDefault();
@@ -13,13 +16,14 @@ export const RegisterPage = () => {
         const email = form.elements.userEmail.value;
         const password = form.elements.userPassword.value;
 
-        const finalUserData = {
-            name,
-            email,
-            password
-        }
-        console.log(finalUserData);
-    }
+        dispatch(
+            registerUserThunk({
+                name,
+                email,
+                password,
+            })
+        );
+    };
 
     return (
 

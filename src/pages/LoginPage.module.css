@@ -6,27 +6,9 @@
   flex-direction: column;
   align-items: center;
   padding: 50px;
-  /* background-color: #ffffff; */
+  background-color: #ffffff;
   border-radius: 8px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-  background-image: url('https://images.wallpaperscraft.ru/image/single/klaviatura_telefon_rabochij_stol_179668_1920x1080.jpg');
-  background-size: cover; /* Розтягнути зображення на весь блок */
-  background-position: center;
-}
-
-.registrationForm:before {
-  /* content: ''; */
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(
-    0,
-    0,
-    0,
-    0.6
-  ); /* Затемнення: змініть альфа-канал за потреби */
 }
 
 .form {
