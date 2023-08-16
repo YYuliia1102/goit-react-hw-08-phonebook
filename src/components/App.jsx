@@ -3,8 +3,8 @@ import { useDispatch, useSelector } from "react-redux";
 import { NavLink, Route, Routes } from "react-router-dom";
 import { selectAuthentificated, selectToken } from "redux/authReducer";
 import { logoutUserThunk, refreshUserThunk } from '../redux/operations.js';
+import PrivateRoute from "./PrivateRoute/PrivateRoute.jsx";
 import styles from './App.module.css';
-// import * as Framer from 'framer';
 
 const HomePage = lazy(() => import('../pages/HomePage'));
 const RegisterPage = lazy(() => import('../pages/RegisterPage'));
@@ -47,10 +47,17 @@ export const App = () => {
       <main>
         <Suspense>
           <Routes>
-            <Route path="/" element={<HomePage />}></Route>
-            <Route path="/contacts" element={<ContactsPage />}></Route>
-            <Route path="/login" element={<LoginPage />}></Route>
-            <Route path="/register" element={<RegisterPage />}></Route>
+            <Route path="/" element={<HomePage />} />
+            <Route
+              path="/contacts"
+              element={
+                <PrivateRoute redirectTo='/login'>
+                  <ContactsPage />
+                </PrivateRoute>
+              }
+            />
+            <Route path="/login" element={<LoginPage />} />
+            <Route path="/register" element={<RegisterPage />} />
           </Routes>
         </Suspense>
       </main>

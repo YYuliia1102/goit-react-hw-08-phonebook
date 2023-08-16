@@ -41,7 +41,7 @@ export const deleteContactThunk = createAsyncThunk(
 );
 
 const initialState = {
-    contacts: null,
+    contacts: [],
     isLoading: false,
     error: null,
 };
@@ -84,9 +84,6 @@ const contactsSlice = createSlice({
             })
             .addCase(deleteContactThunk.fulfilled, (state, action) => {
                 state.isLoading = false;
-                // state.contacts = state.contacts.filter(
-                //   contact => contact.id !== action.payload.id
-                // );
                 const indexDeletedContact = state.contacts.findIndex(
                     contact => contact.id === action.payload.id
                 );
