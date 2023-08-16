@@ -17,10 +17,10 @@ export const App = () => {
   const authentificated = useSelector(selectAuthentificated);
 
   useEffect(() => {
-    if (!token) return;
+    if (!token || authentificated) return;
 
     dispatch(refreshUserThunk());
-  }, [token, dispatch]);
+  }, [token, dispatch, authentificated]);
 
   const handleLogOut = () => {
     dispatch(logoutUserThunk());
