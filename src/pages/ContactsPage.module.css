@@ -1,0 +1,45 @@
+.content {
+  box-sizing: border-box;
+  flex-shrink: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background-color: #403f4c;
+  overflow: hidden;
+  align-content: center;
+  flex-wrap: nowrap;
+  gap: 0;
+  border-radius: 0px 0px 0px 0px;
+  background-image: url('https://images.wallpaperscraft.ru/image/single/klaviatura_telefon_rabochij_stol_179668_1920x1080.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.title {
+  color: #fdb833;
+  font-size: 30px;
+  line-height: 1.1;
+  max-width: 800px;
+  text-align: center;
+  font-family: 'Margarine', sans-serif;
+  text-shadow: 1px 1px 0 #000;
+}
+
+.formLabel {
+  display: block;
+  margin-bottom: 20px;
+  color: #fdb833;
+  text-align: left;
+  font-family: 'Margarine', sans-serif;
+  text-shadow: 1px 1px 0 #000;
+}
+
+.formFind {
+  color: #fdb833;
+  text-align: left;
+  font-family: 'Margarine', sans-serif;
+  text-shadow: 1px 1px 0 #000;
+}
