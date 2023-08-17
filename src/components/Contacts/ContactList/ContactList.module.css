@@ -24,11 +24,13 @@
 .name {
   font-size: 18px;
   font-weight: bold;
+  margin: 5px;
 }
 
 .number {
   font-size: 14px;
   color: #777;
+  margin: 5px;
 }
 
 .deleteButton {
