@@ -24,4 +24,5 @@ code {
 #root {
   padding: 20px;
   max-width: 1158px;
+  width: 100%;
 }
