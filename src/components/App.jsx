@@ -34,7 +34,7 @@ export const App = () => {
           {authentificated ? (
             <>
               <NavLink className={styles.navLink} to="/contacts">Contacts</NavLink>
-              <button onClick={handleLogOut}>Log Out</button>
+              <button className={styles.button} onClick={handleLogOut}>Log Out</button>
             </>
           ) : (
             <>

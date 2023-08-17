@@ -1,5 +1,3 @@
-/* App.module.css */
-
 .container {
   margin: 0 auto;
   padding: 20px;
@@ -81,4 +79,19 @@
   align-content: flex-start;
   gap: 40px;
   border-radius: 0px;
+}
+
+.button {
+  background-color: #fdb833;
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  border-radius: 16px;
+}
+
+.button:hover {
+  background-color: #0c65a8;
 }
