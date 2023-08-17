@@ -32,7 +32,7 @@ export const LoginPage = () => {
     return (
 
         <div className={styles.registrationForm}>
-            <h1>Login into your account</h1>
+            <h1 className={styles.title}>Login into your account</h1>
             <form onSubmit={handleSubmit} className={styles.form}>
                 <label className={styles.formLabel}>
                     <p className={styles.formLabelTitle}>Email:</p>

@@ -29,6 +29,16 @@
   ); /* Затемнення: змініть альфа-канал за потреби */
 }
 
+.title {
+  color: #fdb833;
+  font-size: 30px;
+  line-height: 1.1;
+  max-width: 800px;
+  text-align: center;
+  font-family: 'Margarine', sans-serif;
+  text-shadow: 1px 1px 0 #000;
+}
+
 .form {
   width: 100%;
   max-width: 400px;
@@ -37,6 +47,10 @@
 .formLabel {
   display: block;
   margin-bottom: 20px;
+  color: #fdb833;
+  text-align: left;
+  font-family: 'Margarine', sans-serif;
+  text-shadow: 1px 1px 0 #000;
 }
 
 .formLabelTitle {

@@ -33,7 +33,7 @@ export const RegisterPage = () => {
     return (
 
         <div className={styles.registrationForm}>
-            <h1>Register your account</h1>
+            <h1 className={styles.title}>Register your account</h1>
             <form onSubmit={handleSubmit} className={styles.form}>
                 <label className={styles.formLabel}>
                     <p className={styles.formLabelTitle}>Name:</p>
