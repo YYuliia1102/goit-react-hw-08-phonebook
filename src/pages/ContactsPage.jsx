@@ -7,6 +7,7 @@ import ContactList from '../components/Contacts/ContactList/ContactList';
 import Filter from 'components/Contacts/Filter/Filter';
 import styles from './ContactsPage.module.css';
 
+
 const ContactsPage = () => {
     const authentificated = useSelector(state => state.auth.authentificated);
     const dispatch = useDispatch();

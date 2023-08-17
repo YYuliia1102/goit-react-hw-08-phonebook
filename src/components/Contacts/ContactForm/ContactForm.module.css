@@ -38,8 +38,8 @@
 @media (max-width: 428px) {
   .formContainer {
     border-width: 1px;
-    padding: 5px;
-    max-width: 280px;
+    padding: 10px;
+    max-width: 270px;
     width: 100%;
   }
 }

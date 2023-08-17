@@ -41,6 +41,9 @@
     padding: 5px;
     max-width: 320px;
   }
+  .navLink {
+    margin: 0;
+  }
 }
 
 .navLink:hover {
@@ -85,7 +88,7 @@
   background-color: #fdb833;
   color: #ffffff;
   border: none;
-  padding: 10px 20px;
+  padding: 10px;
   font-size: 16px;
   cursor: pointer;
   transition: background-color 0.3s;
