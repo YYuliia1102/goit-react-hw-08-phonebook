@@ -1,0 +1,37 @@
+.listContainer {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.listItem {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  margin-bottom: 10px;
+}
+
+.contactInfo {
+  flex: 1;
+  padding-left: 10px;
+}
+
+.name {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.number {
+  font-size: 14px;
+  color: #777;
+}
+
+.deleteButton {
+  background-color: #ff4136;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}

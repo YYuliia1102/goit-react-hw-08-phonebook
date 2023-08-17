@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { addContactThunk, selectUserContacts } from 'redux/contactsReducer';
+import styles from './ContactForm.module.css';
 
 const ContactForm = () => {
     const [name, setName] = useState('');
@@ -22,10 +23,11 @@ const ContactForm = () => {
     };
 
     return (
-        <form onSubmit={handleSubmit}>
-            <label>
+        <form className={styles.formContainer} onSubmit={handleSubmit}>
+            <label className={styles.label}>
                 <p>Name:</p>
                 <input
+                    className={styles.inputField}
                     name="contactName"
                     type="text"
                     placeholder="John Doe"
@@ -34,10 +36,10 @@ const ContactForm = () => {
                     required
                 />
             </label>
-            <br />
-            <label>
+            <label className={styles.label}>
                 <p>Number:</p>
                 <input
+                    className={styles.inputField}
                     name="contactNumber"
                     type="tel"
                     placeholder="+1-123-456-7890"
@@ -46,8 +48,7 @@ const ContactForm = () => {
                     required
                 />
             </label>
-            <br />
-            <button type="submit" className="btn btn-primary">
+            <button type="submit" className={styles.submitButton}>
                 Add Contact
             </button>
         </form>

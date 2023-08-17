@@ -1,28 +1,35 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { deleteContactThunk, selectUserContacts } from 'redux/contactsReducer';
+import { deleteContactThunk, selectFilteredContacts, requestContactsThunk } from '../../../redux/contactsReducer';
+import styles from './ContactList.module.css'; // Підключення стилів з файлу ContactList.module.css
 
 const ContactList = () => {
-    const contacts = useSelector(selectUserContacts);
     const dispatch = useDispatch();
+    const filteredContacts = useSelector(selectFilteredContacts);
 
-    const handleDeleteContact = contactId => {
-        dispatch(deleteContactThunk(contactId));
+    useEffect(() => {
+        dispatch(requestContactsThunk());
+    }, [dispatch]);
+
+    const handleDeleteContact = id => {
+        dispatch(deleteContactThunk(id));
     };
 
     return (
-        <ul>
-            {contacts.map(contact => (
-                <li key={contact.id}>
-                    <h3>Name: {contact.name}</h3>
-                    <p>Number: {contact.number}</p>
+        <ul className={styles.listContainer}>
+            {filteredContacts.map(contact => (
+                <li key={contact.id} className={styles.listItem}>
+                    <div className={styles.contactInfo}>
+                        <h3 className={styles.name}>Name: {contact.name}</h3>
+                        <p className={styles.number}>Number: {contact.number}</p>
+                    </div>
                     <button
                         onClick={() => handleDeleteContact(contact.id)}
+                        className={styles.deleteButton}
                         type="button"
                         aria-label="Delete contact"
-                        className="btn btn-danger btn-sm"
                     >
-                        Delete
+                        &times;
                     </button>
                 </li>
             ))}

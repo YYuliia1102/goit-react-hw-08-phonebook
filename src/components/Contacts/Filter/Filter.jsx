@@ -9,6 +9,7 @@ const Filter = () => {
         dispatch(setFilter(event.target.value));
     };
 
+
     return (
         <div>
             <input type="text" onChange={handleFilterChange} />

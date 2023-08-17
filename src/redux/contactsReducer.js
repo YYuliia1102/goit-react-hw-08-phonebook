@@ -1,4 +1,4 @@
-import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
+import { createAsyncThunk, createSlice, createSelector } from '@reduxjs/toolkit';
 import { $instance } from './operations';
 
 export const requestContactsThunk = createAsyncThunk(
@@ -44,11 +44,30 @@ const initialState = {
     contacts: [],
     isLoading: false,
     error: null,
+    filter: '',
 };
+
+export const selectContacts = (state) => state.contacts.contacts;
+export const selectFilter = (state) => state.contacts.filter;
+
+
+export const selectFilteredContacts = createSelector(
+    [selectFilter, selectContacts],
+    (filterValue, contacts) => {
+        return contacts.filter(contact =>
+            contact.name.toLowerCase().includes(filterValue.toLowerCase())
+        );
+    }
+);
 
 const contactsSlice = createSlice({
     name: 'contacts',
     initialState,
+    reducers: {
+        setFilter: (state, action) => {
+            state.filter = action.payload;
+        },
+    },
     extraReducers: builder =>
         builder
             .addCase(requestContactsThunk.pending, state => {
@@ -100,3 +119,4 @@ export const selectContactsIsLoading = state => state.contacts.isLoading;
 export const selectContactsError = state => state.contacts.error;
 
 export const contactsReducer = contactsSlice.reducer;
+export const { setFilter } = contactsSlice.actions;
