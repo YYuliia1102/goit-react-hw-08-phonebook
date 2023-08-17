@@ -1,8 +1,11 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import styles from "./HomePage.module.css";
 // import * as Framer from 'framer';
 
 export default function Home() {
+    const navigate = useNavigate();
+
     return (
         <div className={styles.content}>
             <div className={styles.hero}>
@@ -19,7 +22,7 @@ export default function Home() {
                 <p className={styles.join}>
                     Join us and enjoy an ocean of features that’ll enhance your contact management experience. Register now and let us do the rest!
                 </p>
-                <button className={styles.button}>Sign Up</button>
+                <button className={styles.button} onClick={() => navigate('/register')}>Sign Up</button>
             </div>
         </div>
     );
