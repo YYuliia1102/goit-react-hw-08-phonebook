@@ -43,3 +43,11 @@
   font-family: 'Margarine', sans-serif;
   text-shadow: 1px 1px 0 #000;
 }
+
+@media (max-width: 428px) {
+  .container {
+    border-width: 1px;
+    padding: 5px;
+    max-width: 320px;
+  }
+}
