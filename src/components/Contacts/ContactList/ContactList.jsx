@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { deleteContactThunk, selectFilteredContacts, requestContactsThunk } from '../../../redux/contactsReducer';
 import styles from './ContactList.module.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faUser, faPhone } from '@fortawesome/free-solid-svg-icons';// Підключення стилів з файлу ContactList.module.css
+import { faUser, faPhone } from '@fortawesome/free-solid-svg-icons';
 
 const ContactList = () => {
     const dispatch = useDispatch();
@@ -17,6 +17,10 @@ const ContactList = () => {
         dispatch(deleteContactThunk(id));
     };
 
+    const handleCall = phoneNumber => {
+        window.location.href = `tel:${phoneNumber}`;
+    };
+
     return (
         <ul className={styles.listContainer}>
             {filteredContacts.map(contact => (
@@ -26,7 +30,16 @@ const ContactList = () => {
                             <FontAwesomeIcon icon={faUser} /> {contact.name}
                         </h3>
                         <p className={styles.number}>
-                            <FontAwesomeIcon icon={faPhone} /> {contact.number}
+                            <FontAwesomeIcon icon={faPhone} />{' '}
+                            <a
+                                href={`tel:${contact.number}`}
+                                onClick={e => {
+                                    e.preventDefault();
+                                    handleCall(contact.number);
+                                }}
+                            >
+                                {contact.number}
+                            </a>
                         </p>
                     </div>
                     <button

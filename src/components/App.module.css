@@ -39,7 +39,7 @@
   .container {
     border-width: 1px;
     padding: 5px;
-    max-width: 320px;
+    /* max-width: 320px; */
   }
   .navLink {
     margin: 0;
