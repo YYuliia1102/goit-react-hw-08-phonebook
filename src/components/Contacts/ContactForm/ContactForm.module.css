@@ -39,7 +39,7 @@
   .formContainer {
     border-width: 1px;
     padding: 5px;
-    /* max-width: 300px; */
+    max-width: 280px;
     width: 100%;
   }
 }

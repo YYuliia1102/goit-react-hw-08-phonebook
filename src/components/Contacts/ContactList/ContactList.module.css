@@ -44,6 +44,7 @@
 
 @media (max-width: 428px) {
   .listItem {
-    max-width: 400px;
+    max-width: 270px;
+    width: 100%;
   }
 }
