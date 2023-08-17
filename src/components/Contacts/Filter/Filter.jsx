@@ -1,6 +1,7 @@
 import React from "react";
 import { useDispatch } from "react-redux";
 import { setFilter } from "../../../redux/contactsReducer.js";
+import styled from './Filter.module.css';
 
 const Filter = () => {
     const dispatch = useDispatch();
@@ -10,8 +11,9 @@ const Filter = () => {
     };
 
     return (
-        <div>
-            <input type="text" onChange={handleFilterChange} />
+        <div className={styled.searchContainer}>
+            <input type="text" className={styled.searchInput} onChange={handleFilterChange} />
+            <span className={styled.searchIcon}>&#128269;</span>
         </div>
     );
 };
