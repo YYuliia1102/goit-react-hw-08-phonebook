@@ -2,12 +2,14 @@ import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { addContactThunk, selectUserContacts } from 'redux/contactsReducer';
 import styles from './ContactForm.module.css';
+import InputMask from 'react-input-mask';
 
 const ContactForm = () => {
     const [name, setName] = useState('');
     const [number, setNumber] = useState('');
     const contacts = useSelector(selectUserContacts);
     const dispatch = useDispatch();
+    const numberInputRef = React.createRef();
 
     const handleSubmit = event => {
         event.preventDefault();
@@ -20,6 +22,10 @@ const ContactForm = () => {
         dispatch(addContactThunk({ name, number }));
         setName('');
         setNumber('');
+    };
+
+    const handleNumberChange = event => {
+        setNumber(event.target.value);
     };
 
     return (
@@ -38,17 +44,26 @@ const ContactForm = () => {
             </label>
             <label className={styles.label}>
                 <p>Number:</p>
-                <input
+                <InputMask
                     className={styles.inputField}
                     name="contactNumber"
-                    type="tel"
-                    placeholder="+1-123-456-7890"
+                    mask="+3-999-999-9999"
+                    placeholder="+3-000-000-0000"
                     value={number}
-                    onChange={e => setNumber(e.target.value)}
+                    onChange={handleNumberChange}
+                    ref={numberInputRef}
                     required
                 />
             </label>
-            <button type="submit" className={styles.submitButton}>
+            <button
+                type="submit"
+                className={styles.submitButton}
+                onClick={() => {
+                    if (numberInputRef.current) {
+                        numberInputRef.current._inputElement.blur();
+                    }
+                }}
+            >
                 Add Contact
             </button>
         </form>
